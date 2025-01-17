@@ -57,7 +57,7 @@ GeneralSetup() {
 		Sleep(StandardPauseDuration)
 	}
 	Send('#e')
-	Sleep(100*StandardPauseDuration)
+	Sleep(200*StandardPauseDuration)
 	MoveWindowRight('ahk_exe chrome.exe')
 	Loop (NumberOfBookmarks) {
 		BookmarkNavigator(A_Index)
