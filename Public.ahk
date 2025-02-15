@@ -53,6 +53,10 @@ BookmarkNavigator(Num) {
 ; System-wide hotkey for pairing with headphones
 #h:: {
 	Send('#a')
+	Sleep(StandardPauseDuration)
+	Send('#a')
+	Sleep(StandardPauseDuration)
+	Send('#a')
 	Sleep(20*StandardPauseDuration)
 	Send('{Right}')
 	Sleep(StandardPauseDuration)
@@ -145,18 +149,6 @@ BookmarkNavigator(Num) {
 	Send('^l')
 	Sleep(StandardPauseDuration)
 	Send('chrome://settings/help')
-	Sleep(StandardPauseDuration)
-	Send('{Enter}')
-}
-
-; The following hotkeys are meant to work only in Visual Studio Code
-#HotIf WinActive('ahk_exe Code.exe')
-
-; Hotkey for checking/doing updates
-^u:: {
-	Send('{F1}')
-	Sleep(StandardPauseDuration)
-	Send('Code: check for updates')
 	Sleep(StandardPauseDuration)
 	Send('{Enter}')
 }
