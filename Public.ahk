@@ -30,6 +30,14 @@ BookmarkNavigator(Num) {
 	Send('{Enter}')
 }
 
+; Notify user that script is now active
+MsgBox('Script Public.ahk now active')
+
+; Open and close Quick Settings menu once upon script startup to ensure correct functioning of headphones pairing hotkey
+Send('#a')
+Sleep(20*StandardPauseDuration)
+Send('#a')
+
 ; System-wide music hotkeys
 #Numpad0:: {
 	Send('{Volume_Mute}')
@@ -52,10 +60,6 @@ BookmarkNavigator(Num) {
 
 ; System-wide hotkey for pairing with headphones
 #h:: {
-	Send('#a')
-	Sleep(StandardPauseDuration)
-	Send('#a')
-	Sleep(StandardPauseDuration)
 	Send('#a')
 	Sleep(20*StandardPauseDuration)
 	Send('{Right}')
