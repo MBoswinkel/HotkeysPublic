@@ -7,12 +7,12 @@ StandardPauseDuration := 50
 ; Function for navigating to quick access folders in Windows File Explorer
 FolderNavigator(Num) {
 	Send('+{Tab}')
-	Sleep(2*StandardPauseDuration)
+	Sleep(1.5*StandardPauseDuration)
 	Send('{Home}')
-	Sleep(2*StandardPauseDuration)
+	Sleep(1.5*StandardPauseDuration)
 	Loop (Num+2) {
 		Send('{Down}')
-		Sleep(2*StandardPauseDuration)
+		Sleep(1.5*StandardPauseDuration)
 	}
 	Send('{Enter}')
 	Sleep(5*StandardPauseDuration)
@@ -33,11 +33,6 @@ BookmarkNavigator(Num) {
 ; Notify user that script is now active
 MsgBox('Script Public.ahk now active')
 
-; Open and close Quick Settings menu once upon script startup to ensure correct functioning of headphones pairing hotkey
-Send('#a')
-Sleep(20*StandardPauseDuration)
-Send('#a')
-
 ; System-wide music hotkeys
 #Numpad0:: {
 	Send('{Volume_Mute}')
@@ -56,23 +51,6 @@ Send('#a')
 }
 #Numpad4:: {
 	Send('{Media_Prev}')
-}
-
-; System-wide hotkey for pairing with headphones
-#h:: {
-	Send('#a')
-	Sleep(20*StandardPauseDuration)
-	Send('{Right}')
-	Sleep(StandardPauseDuration)
-	Send('{Tab}')
-	Sleep(StandardPauseDuration)
-	Send('{Enter}')
-	Sleep(20*StandardPauseDuration)
-	Send('+{Tab}')
-	Sleep(StandardPauseDuration)
-	Send('{Enter}')
-	Sleep(StandardPauseDuration)
-	Send('{Esc}')
 }
 
 ; System-wide hotkey for checking/doing updates
