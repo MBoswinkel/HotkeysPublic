@@ -7,12 +7,12 @@ StandardPauseDuration := 50
 ; Function for navigating to quick access folders in Windows File Explorer
 FolderNavigator(Num) {
 	Send('+{Tab}')
-	Sleep(1.5*StandardPauseDuration)
+	Sleep(2*StandardPauseDuration)
 	Send('{Home}')
-	Sleep(1.5*StandardPauseDuration)
+	Sleep(2*StandardPauseDuration)
 	Loop (Num+2) {
 		Send('{Down}')
-		Sleep(1.5*StandardPauseDuration)
+		Sleep(2*StandardPauseDuration)
 	}
 	Send('{Enter}')
 	Sleep(5*StandardPauseDuration)
